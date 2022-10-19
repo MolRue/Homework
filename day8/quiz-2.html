@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <script>
+      // 숫자를 입력받습니다.
+      const rawInput = prompt("cm 단위의 숫자를 입력해주세요.");
+      console.log(rawInput);
+      // 입력을 숫자로 변경하고 cm 단위로 변경합니다.
+      const cm = Number(rawInput); 
+      // ↑ 변환을 먼저
+      console.log(cm);
+      const inch = cm * 0.393701;
+
+      // 출력합니다.
+      // 문자열 출력
+      console.log("결과: " + inch + "입니다." );
+
+      // 문자+숫자 출력
+      console.log("결과: " , inch , "입니다.");
+
+      // ES6 부터 추가된 기능. 최신문법!
+      console.log(`결과:  ${inch} 입니다.`); // 작은따옴표 아님
+
+
+    </script>
+  </head>
+  <body></body>
+</html>

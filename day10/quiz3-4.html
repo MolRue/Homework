@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <script>
+      // 변수를 선언합니다.
+      let output = "";
+      // const inp = Number (prompt('다이아몬드..?',0));
+      const size = "10";
+      // 이중 for문 작성
+
+      for (let i = 1; i <= size; i++) {
+        for (let j = size; j > i; j--) {
+            output += ' '
+        }
+        for (let k = 0; k < 2 * i - 1; k++) {
+            output += '*'
+        }
+          output += '\n'
+      }
+
+      for (let i = size -1; i > 0; i--) {
+        for (let j = size; j > i; j--) {
+            output += ' '
+        }
+        for (let k = 0; k < 2 * i - 1; k++ ){
+            output += '*'
+        }
+          output += '\n'
+       }
+      console.log(output);
+      // 출력합니다.
+
+      
+
+      // for (let i =1; i <= inp; i++) {
+      //   for (let j = inp; j > i; j--) {
+      //     output += ' '
+      //   }
+      //   for (let k = 0; k < 2 * i - 1; k++) {
+      //     output += '*'
+      //   }
+      //   output += '\n'
+      // }
+
+      // for (let i = inp -1; i > 0; i--) {
+      //   for (let j = inp; j > i; j--) {
+      //     output += ' '
+      //   }
+      //   for (let k = 0; k < 2 * i - 1; k++) {
+      //     output += '*'
+      //   }
+      //   output += '\n'
+      // }
+      // console.log(output)
+      // document.write(output)
+    </script>
+  </head>
+  <body></body>
+</html>

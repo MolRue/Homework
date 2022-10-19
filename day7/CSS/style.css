@@ -1,0 +1,356 @@
+@charset "utf-8";
+
+/* ↓ 초기화 속성 */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 10px;
+}
+
+ul, li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+/* 공통 버튼 */
+
+.bt_wrap {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.bt_wrap a {
+    display: inline-block;
+    /* 버튼 사이즈 최소 80px */
+    min-width: 80px;
+    margin-left: 10px;
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 2px;
+    font-size: 1.4rem;
+    text-align: center;
+}
+
+.bt_wrap a:hover {
+    text-decoration: underline;
+}
+
+.bt_wrap a.on {
+background: #000;
+color: #fff;
+}
+
+/* index.html */
+
+.wrap {
+    width: 1000px;
+    margin: 0 auto;
+}
+
+.board_list {
+    width: 100%;
+    border-top: 1px solid #444;
+    border-collapse: collapse;
+    font-size: 1.5rem;
+}
+
+.board_list caption {
+    padding: 30px;
+}
+
+.board_list th, td {
+    border-spacing: 0;
+    border-bottom: 1px solid #444;
+    padding: 10px;
+    text-align: center;
+}
+
+.board_list td.title > a:hover {
+    text-decoration: underline;
+}
+
+.bt_list {
+    text-align: right;
+}
+
+.borad_page {
+    margin-top: 30px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+
+.borad_page a{
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    /* border, padding을 포함해서 32px, 32px의 정사각형 */
+    box-sizing: border-box;
+    border-left: 0;
+    line-height: 32px;
+}
+
+.borad_page a:hover {
+    text-decoration: underline;
+}
+
+.borad_page a.bt {
+    font-size: 1.2rem;
+    letter-spacing: -1px;
+}
+
+.borad_page a.num {
+    font-size: 1.4rem;
+}
+
+.borad_page a.num.on {
+    border-color: #000;
+    background: #000;
+    color: #fff;
+}
+
+/* write.html, view.html */
+
+.board_wrap {
+    width: 1000px;
+    margin: 0 auto;
+}
+
+.board_title {
+    margin: 30px 10px;
+}
+
+.board_title strong{
+    font-size: 3rem;
+}
+
+.board_title p{
+    margin-top: 5px;
+    font-size: 1.4em;
+}
+
+/* write.html */
+
+.board_write {
+    border-top: 2px solid #000;
+}
+
+.board_write .title, 
+.board_write .info{
+    padding: 15px;
+}
+
+.board_write .info {
+    border-top: 1px dashed #ddd;
+    border-bottom: 1px solid #000;
+    font-size: 0;
+}
+
+.board_write .title dl {
+    font-size: 0;
+}
+
+.board_write .info dl {
+    display: inline-block;
+    width: 50%;
+    vertical-align: middle;
+}
+/* vertical-aligh : 수직정렬 */
+
+.board_write .title dt,
+.board_write .title dd,
+.board_write .info dt,
+.board_write .info dd {
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 1.4rem;
+}
+
+.board_write .info dd {
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 1.4rem;
+}
+.board_write .title dt, 
+.board_write .title dt {
+    width: 100px;
+}
+
+.board_write .title dd {
+    width: calc(100% - 100px);
+}
+
+.board_write .title input[type="text"],
+.board_write .info input[type="text"],
+.board_write .info input[type="password"]{
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.board_write .title input[type="text"] {
+    width: 80%;
+}
+
+.board_write .cont {
+    border-bottom: 1px solid #000;
+}
+
+.board_write .cont textarea{
+    display: block;
+    width: 100%;
+    height: 300px;
+    padding: 15px;
+    box-sizing: border-box;
+    border: 0;
+    font-size: 1.4rem;
+    resize: vertical;
+}
+
+/* view.html */
+
+.board_view {
+    width: 100%;
+    border-top: 2px solid #000;
+}
+
+.board_view .title {
+    padding: 20px 15px;
+    border-bottom: 1px dashed #ddd;
+    font-size: 2rem;
+}
+
+.board_view .info {
+    padding: 15px;
+    border-bottom: 1px solid #999;
+    font-size: 0;
+}
+
+.board_view .info dl {
+    position: relative;
+    display: inline-block;
+    padding: 0 20px;
+}
+
+.board_view .info dl:first-child {
+    padding-left: 0;
+}
+
+.board_view .info dl::before {
+    content: "";
+    position: absolute;
+    top: 1px;
+    left: 0%;
+    display: block;
+    width: 1px;
+    height: 13px;
+    background: #ddd;
+}
+
+.board_view .info dl:first::before {
+    display: none;
+}
+
+.board_view .info dl dt,
+.board_view .info dl dd {
+    display: inline;
+    font-size: 1.4rem;
+}
+
+.board_view .info dl dd{
+    margin-left: 10px;
+    color: #777;
+}
+
+.board_view .cont {
+    padding: 15px;
+    border-bottom: 1px solid #000;
+    line-height: 160%;
+    font-size: 1.4rem;
+}
+
+
+/* 768 ~ 1000 */
+
+@media all and (max-width: 1000px) {
+    .wrap {
+        width: 100vw;
+    }
+}
+
+/* 0 ~ 767px */
+
+@media all and (max-width: 767px) {
+    /* ↓ 여기서부터 */
+    .wrap {
+        width: 95vw;
+        /* 뷰포트 기준으로 95% */
+        /* media query 에서는 위에 중복되는 내용은 다시안써도됨 */
+    }
+
+    .board_list th:nth-of-type(1),
+    .board_list td:nth-of-type(1) {
+        display: none;
+    
+    }
+    .board_list th:nth-of-type(3),
+    .board_list td:nth-of-type(3) {
+        display: none;
+    }
+
+    .board_list th:nth-of-type(4),
+    .board_list td:nth-of-type(4) {
+        display: none;
+    }
+
+    /* ↑ 여기까지 시험 */
+    .board_wrap {
+        width: 100vw;
+    }
+
+    .board_write .title dt {
+        width: 70px;
+    }
+
+    .board_write .info dt {
+        width: 70px;
+        margin-bottom: 10px;
+    }
+
+    
+
+    .board_write .title input[type="text"] {
+        width: 100%        
+    }
+    .board_write .info input[type="text"],
+    .board_write .info input[type="password"] {
+        width: 80%        
+    }
+
+    .board_view .info dl {
+        padding:0 10px;
+    }
+
+    .board_view .info dl dt,
+    .board_view .info dl dd {
+        font-size: 1rem;
+        display: inline-block;
+    }
+
+    .board_view .info dl::before {
+        display: none;
+    }
+
+    .board_view .info dl:nth-of-type(1),
+    .board_view .info dl:nth-of-type(3) {
+        display: none;
+    }
+}
+
