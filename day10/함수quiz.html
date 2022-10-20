@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 이거보고 함수 만들기 > return 값으로
+        // 매개변수에는 몸무개와 신장
+        // return 값은 bmi 지수를 리턴
+        // 3가지 모양의 함수만들기
+        // BMI지수 > 몸무게(kg) ÷ (신장(m) × 신장(m))
+
+        // #.1
+        // function bmi(a ,b) {
+        // let bmi = a / (b * b);
+        // return bmi;
+        // }
+        // bmi (50, 1.6)
+
+        // #2 ★★★★★
+        const bmi = function(a, b) {
+        let sum =  a / (b * b);
+        return sum;
+        }
+        var result = bmi(50, 1.6)
+        console.log(result)
+
+        
+
+    </script>
+</body>
+</html>

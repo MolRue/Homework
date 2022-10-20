@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>퀴즈?</title>
+</head>
+<body>
+    <!-- 1. 연도를 입력하고, 윤년을 확인하는 함수를 만드시오 -->
+    <!-- 4로 나누어 떨어지면서 100으로 나누어 떨어지지 않는 해는 윤년 -->
+    <!-- 또는 400으로 나누어 떨어지는 해는 윤년 -->
+
+    <!-- 2. 매개변수 a,b 를 입력받아 a부터 b 까지 더한 값을 리턴하는 함수를 만드시오 -->
+    <!-- 3. 배열을 입력받아 최소값을 구하는 함수를? -->
+    <script>
+        // 1. 
+        
+        function leapYear(year){
+           return (year % 4 === 0) && (year % 100 !== 0) || (year % 400 === 0)
+        }
+
+        let result = leapYear(1971)
+        
+        if(result) {
+            console.log('윤년 입니다.')
+        } else {
+            console.log('윤년이 아닙니다.')
+        }
+
+        // 1-1
+        
+        console.log(`2020년은 윤년인가?${leapYear(2020)}`)
+        console.log(`2021년은 윤년인가?${leapYear(2021)}`)
+        console.log(`2022년은 윤년인가?${leapYear(2022)}`)
+        console.log('----------------------------------')
+
+        // 2.
+        
+        const sumAll = function(a, b){
+            let output = 0;
+            for (let i = a; i <= b ; i++) {
+                console.log(i);
+                output += i;  // 누적합산을 하는거니깐..! 
+            }
+            return output;   // for 문이 다 끝나면 return을 시켜준다
+        }
+
+        console.log(`합: ${sumAll(1,10)}`)
+        console.log(`합: ${sumAll(1,100)}`)
+        // console.log(`합: ${sumAll(1,1000)}`) 이건 넘 많이나오더라...
+        
+        console.log('----------------------------------')
+
+        // 3. > 알고리즘 문제로 내기 좋다고..? 합니다.
+        
+        function min(array) {
+            let output = array[0];
+
+            for (const item of array) {  // for...of  같은 경우엔 매개변수의 값을 가져올수 있다.
+                if (output > item){  // item 에는 밑에 testArr의 값이 하나씩 대입
+                    output = item    // 하나씩 대조하는것. output 값이 item값 보다 작아질때까지
+                }                    // 최종적으로는 목록의 모든 array 중 가장 작은수가 남을때 까지 반복!
+            }
+            return output
+        }
+
+        const testArr = [52, 273, 43, 103, 275, 24, 57]
+        console.log(`최소값: ${min(testArr)}`)
+
+        console.log('----------------------------------')
+    </script>
+</body>
+</html>
