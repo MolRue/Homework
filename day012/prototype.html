@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function Pet (nameVal, agePrint, catBreed) {
+            this.name = nameVal;
+            this.age = agePrint;
+            this.breed = catBreed;
+        }
+
+        Pet.prototype.eat = function(food) {
+            console.log(`${this.name}(이)가 ${food}을(를) 먹습니다.`)
+        }
+        Pet.prototype.agePrint = function(age) {
+            console.log(`${this.name}(이)의 나이는 ${this.age}세 입니다.`)
+        }
+        Pet.prototype.catBreed = function(breed) {
+            console.log(`${this.name}(이)의 품종은 ${this.breed} 입니다.`)
+        }
+
+        const pet = new Pet("구름", 4, '코리안숏헤어')
+        const pet2 = new Pet("별", 2, '스코티쉬폴드')
+        const pet3 = new Pet("달", 3, '노르웨이 숲')
+        const pet4 = new Pet("태양",1, '먼치킨')
+
+    </script>
+</body>
+</html>
